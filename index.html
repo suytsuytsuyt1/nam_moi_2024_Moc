@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Chuc mung nam moi
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: linear-gradient(20deg,#f90707, #f5f215);
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Slideshow container */
+
+    .slide-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    }
+    .slide-card-left{   
+        background-size:cover;
+        width: 280px;
+        height: 350px;
+        position: relative;
+        background-image: url(nua_1.jpg);
+        background-position-x: right;
+        z-index: 5;
+
+    }
+    .slide-card-rigth{
+        
+        background-size: cover;
+        width: 250px;
+        height: 350px;
+        position: relative;
+        background-image: url(nua_2.jpg);
+        background-position-x: left;
+        z-index: 5;
+    }
+    .click{
+        width: 35px;
+        height: 35px;
+        background:url(click.gif);
+        background-size: cover;
+        position: absolute;
+        border-radius: 40%;
+        z-index: 6;
+    }
+    @media all and (max-width:600px) {
+
+        .slide-card{
+            width: 250px;
+            height: 300px;
+        }
+        
+    }
+
+
+
+
+
+
+
+    /* --------------swiper------------- */
+
+    swiper-container{
+      width: 280px;
+      height: 360px;
+      position: absolute;
+    }
+    @media all and (max-width: 600px) {
+      swiper-container {
+      width: 220px;
+      height: 300px;
+    }
+    }
+
+    swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 18px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    swiper-slide:nth-child(1) {
+      background:url(pngtree-background-design-of-red-firecracker-fortune-character-border-frame-png-image_542443.jpg);
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Dancing Script', cursive;
+      color: #e9f902;
+      font-size:25px;
+      position: relative;
+    }
+    swiper-slide:nth-child(1)>img{
+      position:absolute;
+      width:40%;
+      right: 0;
+      top: 20%;
+    }
+    #chi_dan{
+      width: 35px;
+      height: 35px;
+      position: absolute;
+      background-image: url(buy.gif);
+      background-size: cover;
+      border-radius: 40%;
+      bottom: 10%;
+      left: 10%;
+    }
+  
+
+
+    swiper-slide:nth-child(2n) {
+      background:url(background-tet-23.jpg);
+      background-size: cover;
+      background-position-y: -10px;
+      font-family: 'Dancing Script', cursive;
+      color: #f80a2e;
+      text-align: center;
+      font-size:30px;
+      
+    }
+
+    swiper-slide:nth-child(3n) {
+      background:url(background_5.jpg);
+      background-size: cover;
+      font-family: 'Dancing Script', cursive;
+      color: #f80a2e;
+      text-align: center;
+      font-size:30px;
+    
+    }
+
+    swiper-slide:nth-child(4n) {
+      background:url(backgrounf_4.jpg);
+      background-size: cover;
+      font-family: 'Dancing Script', cursive;
+      color: #e0f80a;
+      text-align: center;
+      font-size:30px;
+    }
+
+    swiper-slide:nth-child(5n) {
+      background:url(background_6.png);
+      background-size: cover;
+      font-family: 'Dancing Script', cursive;
+      color: #f80a22;
+      text-align: center;
+      font-size:30px;
+    }
+
+    swiper-slide:nth-child(6n) {
+      background:url(background_3.jpg);
+      background-size: cover;
+      font-family: 'Dancing Script', cursive;
+      color: #e0f80a;
+      text-align: center;
+      font-size:30px;
+    }
+
+    swiper-slide:nth-child(7n) {
+      background:url(background_5.jpg);
+      background-size: cover;
+      font-family: 'Dancing Script', cursive;
+      color: #f80a0a;
+      text-align: center;
+      font-size:40px;
+    }
+
+    swiper-slide:nth-child(8n) {
+      background-color: rgb(0, 68, 255);
+      color: #e0f80a;
+      text-align: center;
+      font-size:30px;
+    }
+    swiper-slide:nth-child(9n) {
+      background-color: rgb(0, 68, 255);
+      color: #f80a16;
+      text-align: center;
+      font-size:30px;
+    }
+
+    swiper-slide:nth-child(10n) {
+      font-size: 40px;
+      font-family: 'Dancing Script', cursive;
+    }
+
+
+       /* -------------nhạc------------- */
+       audio{
+        z-index: -100;
+        position: absolute;
+        opacity: 0;
+       }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="slide-card">
+    <div class="slide-card-left"></div>
+    <div class="slide-card-rigth"></div>
+  
+
+  <swiper-container class="mySwiper" effect="cards" grab-cursor="true">
+    <swiper-slide>
+      <p>Chúc</p>
+      <p>Mừng</p>
+      <p>Năm </p>
+      <p>Mới</p>
+      <img src="85a92a_2e832761c76d449995b82275c792715a~mv2.gif" alt="">
+      <div id="chi_dan">
+      </div>
+    </swiper-slide>
+    <swiper-slide >Hi !!! <br> Chào Mốc <br>😊😊😊</swiper-slide>
+    <swiper-slide >Lại một năm nữa đến rồi đấy !</swiper-slide>
+    <swiper-slide > Chúc m </swiper-slide>
+    <swiper-slide > luôn luôn lạc quan</swiper-slide>
+    <swiper-slide >Khỏe mạnh</swiper-slide>
+    <swiper-slide >Vui vẻ yêu đời</swiper-slide>
+    <swiper-slide >kiếm thật nhiều tiền</swiper-slide>
+    <swiper-slide >cho dù có khó khăn gì<br> cũng phải luôn giữ nụ cười trên môi đấy </swiper-slide>
+    <swiper-slide >Nhé!!!</swiper-slide>
+  </swiper-container>
+
+  <div class="click"></div>
+
+  <audio class="play_audio" controls autoplay loop>
+    <source src="y2mate.com - Tết Đong Đầy  Kay Trần x Nguyễn Khoa x Duck V x Homieboiz Ness Mix.mp3" type="">
+  </audio>
+</div>
+</body>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  <script>
+    document.querySelector('.click').addEventListener('click',function(){
+        var left = document.querySelector('.slide-card-left');
+        var rigth = document.querySelector('.slide-card-rigth');
+        var click_btn = document.querySelector('.click');
+        var swiper = document.querySelector('.mySwiper')
+        var click_play = document.querySelector('.play_audio');
+
+        left.style.transform = 'translateX(-100%)';
+        left.style.transition = 'all 3s';
+        left.style.opacity = '0';
+           
+        rigth.style.transform = 'translatex(100%)';
+        rigth.style.transition = ' all 3s';
+        rigth.style.opacity = '0';
+        
+        click_btn.style.transition= 'all 3s';
+        click_btn.style.opacity = '0';
+        click_btn.style.zIndex = '-100'
+
+        click_play.play();
+
+       
+        setTimeout(function(){
+          left.style.display = 'block';
+          rigth.style.display = 'block';
+          click_btn.style.display = 'block';
+        },2000)         
+    })
+
+</script>
+
+</html>
